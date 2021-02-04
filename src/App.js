@@ -1,19 +1,11 @@
-import './App.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { signInAction } from './reducks/users/actions';
+import React from 'react'
+import Router from './Router'
 
-function App() {
-  const dispatch = useDispatch()
-  const selector = useSelector(state => state)
-
-  console.log(selector.users)
-
+const App = () => {
   return (
-    <div className="App">
-      <button
-        onClick={() => dispatch(signInAction({ uid: '0001', username: 'yokokura' }))}>Sign in
-      </button>
-    </div>
+    <main>
+      <Router />
+    </main>
   )
 }
 
